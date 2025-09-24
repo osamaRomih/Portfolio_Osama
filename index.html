@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Osama Romih - Full Stack Developer | أسامة رميح - مطور ويب متكامل
+    </title>
+    <meta
+      name="description"
+      content="Osama Romih - Full Stack Developer with 4+ years experience in Angular, Node.js, and modern web technologies"
+    />
+    <meta
+      name="keywords"
+      content="Full Stack Developer, Angular, Node.js, Web Development, أسامة رميح"
+    />
+    <meta property="og:title" content="Osama Romih - Full Stack Developer" />
+    <meta
+      property="og:description"
+      content="Professional Full Stack Developer specializing in Angular and Node.js"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://osamaromih.dev" />
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Osama Romih",
+        "jobTitle": "Full Stack Developer",
+        "url": "https://osamaromih.dev",
+        "sameAs": [
+          "https://github.com/osamaromih",
+          "https://linkedin.com/in/osamaromih"
+        ]
+      }
+    </script>
+    <link rel="icon" type="image/png" href="./assets/portofolio_4.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Global Digital Background -->
+    <div class="digital-background" id="digitalBackground"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+      <div class="container">
+        <a class="navbar-brand gradient-text" href="#home">Osama Romih</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home" data-en="Home" data-ar="الرئيسية"
+                >الرئيسية</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about" data-en="About" data-ar="نبذة"
+                >نبذة</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#skills"
+                data-en="Skills"
+                data-ar="المهارات"
+                >المهارات</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#projects"
+                data-en="Projects"
+                data-ar="المشاريع"
+                >المشاريع</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#stats"
+                data-en="Stats"
+                data-ar="الإحصائيات"
+                >الإحصائيات</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#contact"
+                data-en="Contact"
+                data-ar="تواصل"
+                >تواصل</a
+              >
+            </li>
+          </ul>
+
+          <div class="d-flex align-items-center">
+            <div class="lang-toggle">
+              <button class="lang-btn active" data-lang="ar">ع</button>
+              <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+            <button class="theme-toggle ms-3" id="themeToggle">
+              <i class="fas fa-moon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Social Links -->
+    <div class="social-links d-none d-lg-flex">
+      <!-- href="mailto:osamaromih2020@gmail.com" class="social-link email"> -->
+      <a
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=osamaromih2020@gmail.com"
+        target="_blank"
+        class="social-link email"
+      >
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a
+        href="https://github.com/osamaromih"
+        class="social-link github"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fab fa-github"></i>
+      </a>
+      <a
+        href="https://linkedin.com/in/osamaromih"
+        class="social-link linkedin"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a
+        href="https://facebook.com/osama.romih.12"
+        class="social-link facebook"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </div>
+
+    <!-- WhatsApp Float -->
+    <a
+      href="https://wa.me/+201092225678?text=مرحباً%20أسامة،%20أود%20التحدث%20معك%20حول%20مشروع"
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 hero-content slide-in-left">
+            <p class="mb-3" data-en="Hi, I'm" data-ar="مرحباً، أنا">
+              مرحباً، أنا
+            </p>
+            <h1 class="gradient-text">Osama Romih</h1>
+            <h2
+              class="hero-subtitle"
+              data-en="Full Stack Developer"
+              data-ar="مطور ويب متكامل"
+            >
+              مطور ويب متكامل
+            </h2>
+            <p
+              class="hero-description"
+              data-en="Passionate Full Stack Developer with 3+ years of experience creating innovative web solutions using modern technologies like Angular, Node.js, and cloud platforms."
+              data-ar="مطور ويب متكامل شغوف بخبرة تزيد عن 3 سنوات في إنشاء حلول ويب مبتكرة باستخدام التقنيات الحديثة مثل Angular و Node.js والمنصات السحابية."
+            >
+              مطور ويب متكامل شغوف بخبرة تزيد عن 3 سنوات في إنشاء حلول ويب
+              مبتكرة باستخدام التقنيات الحديثة مثل Angular و Node.js والمنصات
+              السحابية.
+            </p>
+            <div class="hero-buttons">
+              <button
+                class="btn btn-primary"
+                onclick="scrollToSection('projects')"
+                data-en="View My Work"
+                data-ar="عرض أعمالي"
+              >
+                عرض أعمالي
+              </button>
+              <button
+                class="btn btn-outline"
+                onclick="openContactModal()"
+                data-en="Get In Touch"
+                data-ar="تواصل معي"
+              >
+                تواصل معي
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-6 hero-image slide-in-right">
+            <div class="text-center position-relative">
+              <!-- <img
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Ccircle cx='150' cy='150' r='140' fill='%23667eea'/%3E%3Ccircle cx='150' cy='120' r='40' fill='%23fff'/%3E%3Cpath d='M110 180 Q150 220 190 180' stroke='%23fff' stroke-width='8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"
+                alt="Osama Romih"
+                class="profile-img"
+              /> -->
+              <img
+                src="./assets/Osama.png"
+                alt="Osama Romih"
+                class="profile-img"
+              />
+              <div class="experience-badge">
+                <div class="fw-bold gradient-text">3+ Years</div>
+                <small data-en="Experience" data-ar="خبرة">خبرة</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <i class="fas fa-chevron-down text-muted"></i>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title fade-in" data-en="About Me" data-ar="نبذة عني">
+          نبذة عني
+        </h2>
+        <div class="row">
+          <div class="col-lg-6 fade-in">
+            <p
+              class="lead mb-4"
+              data-en="I'm a passionate Full Stack Developer with over 3 years of experience in creating robust, scalable web applications. My expertise spans across modern frontend frameworks like Angular and backend technologies including Node.js and PHP."
+              data-ar="أنا مطور ويب متكامل شغوف بخبرة تزيد عن 3 سنوات في إنشاء تطبيقات ويب قوية وقابلة للتوسع. خبرتي تشمل أطر العمل الحديثة مثل Angular وتقنيات الخادم مثل Node.js و PHP."
+            >
+              أنا مطور ويب متكامل شغوف بخبرة تزيد عن 3 سنوات في إنشاء تطبيقات
+              ويب قوية وقابلة للتوسع. خبرتي تشمل أطر العمل الحديثة مثل Angular
+              وتقنيات الخادم مثل Node.js و PHP.
+            </p>
+            <p
+              data-en="I specialize in building user-centric applications that solve real-world problems. From concept to deployment, I ensure every project meets the highest standards of quality, performance, and user experience."
+              data-ar="أتخصص في بناء تطبيقات تركز على المستخدم وتحل مشاكل حقيقية. من الفكرة إلى النشر، أضمن أن كل مشروع يلبي أعلى معايير الجودة والأداء وتجربة المستخدم."
+            >
+              أتخصص في بناء تطبيقات تركز على المستخدم وتحل مشاكل حقيقية. من
+              الفكرة إلى النشر، أضمن أن كل مشروع يلبي أعلى معايير الجودة والأداء
+              وتجربة المستخدم.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-md-6 mb-4 fade-in">
+                <div class="card">
+                  <div class="card-icon">
+                    <i class="fas fa-code"></i>
+                  </div>
+                  <h5
+                    data-en="Technical Excellence"
+                    data-ar="التميز التقني"
+                    style="color: var(--text-primary)"
+                  >
+                    التميز التقني
+                  </h5>
+                  <p
+                    data-en="Clean, maintainable code following best practices and industry standards."
+                    data-ar="كود نظيف وقابل للصيانة يتبع أفضل الممارسات والمعايير الصناعية."
+                    style="color: var(--text-secondary)"
+                  >
+                    كود نظيف وقابل للصيانة يتبع أفضل الممارسات والمعايير
+                    الصناعية.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4 fade-in">
+                <div class="card">
+                  <div class="card-icon">
+                    <i class="fas fa-users"></i>
+                  </div>
+                  <h5
+                    data-en="Team Collaboration"
+                    data-ar="العمل الجماعي"
+                    style="color: var(--text-primary)"
+                  >
+                    العمل الجماعي
+                  </h5>
+                  <p
+                    data-en="Effective communication and collaboration in agile development environments."
+                    data-ar="تواصل وتعاون فعال في بيئات التطوير المرنة."
+                    style="color: var(--text-secondary)"
+                  >
+                    تواصل وتعاون فعال في بيئات التطوير المرنة.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4 fade-in">
+                <div class="card">
+                  <div class="card-icon">
+                    <i class="fas fa-lightbulb"></i>
+                  </div>
+                  <h5
+                    data-en="Problem Solving"
+                    data-ar="حل المشاكل"
+                    style="color: var(--text-primary)"
+                  >
+                    حل المشاكل
+                  </h5>
+                  <p
+                    data-en="Creative solutions to complex technical challenges and business requirements."
+                    data-ar="حلول إبداعية للتحديات التقنية المعقدة ومتطلبات الأعمال."
+                    style="color: var(--text-secondary)"
+                  >
+                    حلول إبداعية للتحديات التقنية المعقدة ومتطلبات الأعمال.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4 fade-in">
+                <div class="card">
+                  <div class="card-icon">
+                    <i class="fas fa-chart-line"></i>
+                  </div>
+                  <h5
+                    data-en="Results Driven"
+                    data-ar="موجه بالنتائج"
+                    style="color: var(--text-primary)"
+                  >
+                    موجه بالنتائج
+                  </h5>
+                  <p
+                    data-en="Focus on delivering measurable business value and user satisfaction."
+                    data-ar="التركيز على تحقيق قيمة تجارية قابلة للقياس ورضا المستخدمين."
+                    style="color: var(--text-secondary)"
+                  >
+                    التركيز على تحقيق قيمة تجارية قابلة للقياس ورضا المستخدمين.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section
+      id="skills"
+      class="section"
+      style="background: var(--bg-secondary)"
+    >
+      <div class="container">
+        <h2
+          class="section-title fade-in"
+          data-en="Skills & Technologies"
+          data-ar="المهارات والتقنيات"
+        >
+          المهارات والتقنيات
+        </h2>
+        <div class="row" id="skillsGrid">
+          <!-- Skills will be populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2
+          class="section-title fade-in"
+          data-en="Featured Projects"
+          data-ar="المشاريع المميزة"
+        >
+          المشاريع المميزة
+        </h2>
+
+        <div class="project-filters fade-in">
+          <button
+            class="filter-btn active"
+            data-filter="all"
+            data-en="All"
+            data-ar="الكل"
+          >
+            الكل
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="heavy"
+            data-en="Heavy"
+            data-ar="ثقيل"
+          >
+            ثقيل
+          </button>
+          <button
+            class="filter-btn"
+            data-filter="small"
+            data-en="Small"
+            data-ar="صغير"
+          >
+            صغير
+          </button>
+        </div>
+
+        <div class="row" id="projectsGrid">
+          <!-- Projects will be populated by JavaScript -->
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section fade-in">
+          <h3
+            data-en="Ready to Build Something Amazing?"
+            data-ar="مستعد لبناء شيء مذهل؟"
+          >
+            مستعد لبناء شيء مذهل؟
+          </h3>
+          <p
+            data-en="Let's discuss how these skills can help bring your project to life."
+            data-ar="دعنا نناقش كيف يمكن لهذه المهارات أن تساعد في إحياء مشروعك."
+          >
+            دعنا نناقش كيف يمكن لهذه المهارات أن تساعد في إحياء مشروعك.
+          </p>
+          <button
+            class="btn btn-light"
+            onclick="startConversation()"
+            data-en="Start a Conversation"
+            data-ar="ابدأ محادثة"
+          >
+            ابدأ محادثة
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="section stats">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="stat-item fade-in">
+              <span class="stat-number" data-count="3">0</span>
+              <div
+                class="stat-label"
+                data-en="Years Experience"
+                data-ar="سنوات خبرة"
+              >
+                سنوات خبرة
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="stat-item fade-in">
+              <span class="stat-number" data-count="50">0</span>
+              <div
+                class="stat-label"
+                data-en="Projects Completed"
+                data-ar="مشروع مكتمل"
+              >
+                مشروع مكتمل
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="stat-item fade-in">
+              <span class="stat-number" data-count="30">0</span>
+              <div
+                class="stat-label"
+                data-en="Happy Clients"
+                data-ar="عميل راضي"
+              >
+                عميل راضي
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="stat-item fade-in">
+              <span class="stat-number" data-count="100000">0</span>
+              <div
+                class="stat-label"
+                data-en="Lines of Code"
+                data-ar="سطر برمجي"
+              >
+                سطر برمجي
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2
+          class="section-title fade-in"
+          data-en="Get In Touch"
+          data-ar="تواصل معي"
+        >
+          تواصل معي
+        </h2>
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <form id="contactForm" class="fade-in">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="الاسم"
+                    data-en-placeholder="Name"
+                    data-ar-placeholder="الاسم"
+                    required
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="البريد الإلكتروني"
+                    data-en-placeholder="Email"
+                    data-ar-placeholder="البريد الإلكتروني"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="الموضوع"
+                  data-en-placeholder="Subject"
+                  data-ar-placeholder="الموضوع"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <textarea
+                  class="form-control"
+                  rows="5"
+                  placeholder="الرسالة"
+                  data-en-placeholder="Message"
+                  data-ar-placeholder="الرسالة"
+                  required
+                ></textarea>
+              </div>
+              <div class="text-center">
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  data-en="Send Message"
+                  data-ar="إرسال الرسالة"
+                >
+                  إرسال الرسالة
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-lg-4 text-center mb-4 fade-in">
+            <div class="card">
+              <div class="card-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <h5
+                data-en="Email"
+                data-ar="البريد الإلكتروني"
+                style="color: var(--text-primary)"
+              >
+                البريد الإلكتروني
+              </h5>
+              <p style="color: var(--text-secondary)">
+                osamaromih2020@gmail.com
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 text-center mb-4 fade-in">
+            <div class="card">
+              <div class="card-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <h5
+                data-en="Phone"
+                data-ar="الهاتف"
+                style="color: var(--text-primary)"
+              >
+                الهاتف
+              </h5>
+              <p style="color: var(--text-secondary)">+20 123 456 7890</p>
+            </div>
+          </div>
+          <div class="col-lg-4 text-center mb-4 fade-in">
+            <div class="card">
+              <div class="card-icon">
+                <i class="fas fa-download"></i>
+              </div>
+              <h5
+                data-en="Download CV"
+                data-ar="تحميل السيرة الذاتية"
+                style="color: var(--text-primary)"
+              >
+                تحميل السيرة الذاتية
+              </h5>
+              <button
+                class="btn btn-outline mt-2"
+                onclick="downloadCV()"
+                data-en="Download PDF"
+                data-ar="تحميل PDF"
+                style="
+                  color: var(--text-primary);
+                  border-color: var(--text-primary);
+                "
+              >
+                تحميل PDF
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <h5 class="gradient-text">Osama Romih</h5>
+            <p
+              data-en="Full Stack Developer passionate about creating innovative web solutions."
+              data-ar="مطور ويب متكامل شغوف بإنشاء حلول ويب مبتكرة."
+            >
+              مطور ويب متكامل شغوف بإنشاء حلول ويب مبتكرة.
+            </p>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <h6 data-en="Quick Links" data-ar="روابط سريعة">روابط سريعة</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a
+                  href="#about"
+                  class="text-decoration-none"
+                  data-en="About"
+                  data-ar="نبذة"
+                  >نبذة</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#skills"
+                  class="text-decoration-none"
+                  data-en="Skills"
+                  data-ar="المهارات"
+                  >المهارات</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#projects"
+                  class="text-decoration-none"
+                  data-en="Projects"
+                  data-ar="المشاريع"
+                  >المشاريع</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-decoration-none"
+                  data-en="Contact"
+                  data-ar="تواصل"
+                  >تواصل</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <h6 data-en="Connect" data-ar="تواصل">تواصل</h6>
+            <div class="d-flex gap-3">
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=osamaromih2020@gmail.com"
+                target="_blank"
+                class="text-decoration-none"
+              >
+                <i class="fas fa-envelope fa-lg"></i>
+              </a>
+              <a
+                href="https://github.com/osamaromih"
+                class="text-decoration-none"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-github fa-lg"></i>
+              </a>
+              <a
+                href="https://linkedin.com/in/osamaromih"
+                class="text-decoration-none"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-linkedin-in fa-lg"></i>
+              </a>
+              <a
+                href="https://facebook.com/osama.romih.12"
+                class="text-decoration-none"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-facebook-f fa-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="text-center">
+          <p>
+            &copy; 2024 Osama Romih.
+            <span data-en="All rights reserved." data-ar="جميع الحقوق محفوظة."
+              >جميع الحقوق محفوظة.</span
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" data-en="Get In Touch" data-ar="تواصل معي">
+              تواصل معي
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="modalContactForm">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="الاسم"
+                    data-en-placeholder="Name"
+                    data-ar-placeholder="الاسم"
+                    required
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="البريد الإلكتروني"
+                    data-en-placeholder="Email"
+                    data-ar-placeholder="البريد الإلكتروني"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="الموضوع"
+                  data-en-placeholder="Subject"
+                  data-ar-placeholder="الموضوع"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <textarea
+                  class="form-control"
+                  rows="4"
+                  placeholder="الرسالة"
+                  data-en-placeholder="Message"
+                  data-ar-placeholder="الرسالة"
+                  required
+                ></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+              data-en="Close"
+              data-ar="إغلاق"
+            >
+              إغلاق
+            </button>
+            <button
+              type="submit"
+              form="modalContactForm"
+              class="btn btn-primary"
+              data-en="Send Message"
+              data-ar="إرسال الرسالة"
+            >
+              إرسال الرسالة
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Options Modal -->
+    <div class="modal fade" id="contactOptionsModal" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header border-0 pb-0">
+            <h4
+              class="modal-title gradient-text text-center w-100"
+              data-en="Let's Connect!"
+              data-ar="دعنا نتواصل!"
+            >
+              دعنا نتواصل!
+            </h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body p-4">
+            <p
+              class="text-center mb-4 text-muted"
+              data-en="Choose your preferred way to get in touch"
+              data-ar="اختر الطريقة المفضلة للتواصل"
+            >
+              اختر الطريقة المفضلة للتواصل
+            </p>
+
+            <div class="row g-4">
+              <!-- WhatsApp Option -->
+              <div class="col-md-4">
+                <div
+                  class="contact-option-card whatsapp"
+                  onclick="openWhatsApp()"
+                >
+                  <div class="contact-icon whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                  </div>
+                  <h5 data-en="WhatsApp" data-ar="واتساب">واتساب</h5>
+                  <p
+                    data-en="Quick chat for instant communication"
+                    data-ar="محادثة سريعة للتواصل الفوري"
+                  >
+                    محادثة سريعة للتواصل الفوري
+                  </p>
+                  <div class="contact-badge">
+                    <i class="fas fa-bolt"></i>
+                    <span data-en="Instant" data-ar="فوري">فوري</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Email Option -->
+              <div class="col-md-4">
+                <div
+                  class="contact-option-card email"
+                  onclick="openEmailClient()"
+                >
+                  <div class="contact-icon email">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <h5 data-en="Email" data-ar="البريد الإلكتروني">
+                    البريد الإلكتروني
+                  </h5>
+                  <p
+                    data-en="Professional communication for detailed discussions"
+                    data-ar="تواصل مهني للمناقشات التفصيلية"
+                  >
+                    تواصل مهني للمناقشات التفصيلية
+                  </p>
+                  <div class="contact-badge">
+                    <i class="fas fa-briefcase"></i>
+                    <span data-en="Professional" data-ar="مهني">مهني</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Contact Form Option -->
+              <div class="col-md-4">
+                <div
+                  class="contact-option-card form"
+                  onclick="openContactForm()"
+                >
+                  <div class="contact-icon form">
+                    <i class="fas fa-edit"></i>
+                  </div>
+                  <h5 data-en="Contact Form" data-ar="نموذج التواصل">
+                    نموذج التواصل
+                  </h5>
+                  <p
+                    data-en="Fill out a detailed form with your project requirements"
+                    data-ar="املأ نموذج مفصل بمتطلبات مشروعك"
+                  >
+                    املأ نموذج مفصل بمتطلبات مشروعك
+                  </p>
+                  <div class="contact-badge">
+                    <i class="fas fa-list-alt"></i>
+                    <span data-en="Detailed" data-ar="مفصل">مفصل</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Info Section -->
+            <div class="quick-info mt-5">
+              <div class="row text-center">
+                <div class="col-md-4">
+                  <div class="info-item">
+                    <i class="fas fa-clock text-primary"></i>
+                    <h6 data-en="Response Time" data-ar="وقت الاستجابة">
+                      وقت الاستجابة
+                    </h6>
+                    <p data-en="Within 2 hours" data-ar="خلال ساعتين">
+                      خلال ساعتين
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="info-item">
+                    <i class="fas fa-globe text-success"></i>
+                    <h6 data-en="Availability" data-ar="التوفر">التوفر</h6>
+                    <p data-en="24/7 Online" data-ar="متاح 24/7">متاح 24/7</p>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="info-item">
+                    <i class="fas fa-handshake text-warning"></i>
+                    <h6 data-en="Free Consultation" data-ar="استشارة مجانية">
+                      استشارة مجانية
+                    </h6>
+                    <p data-en="First 30 minutes" data-ar="أول 30 دقيقة">
+                      أول 30 دقيقة
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Detail Modal -->
+    <div class="modal fade" id="projectModal" tabindex="-1">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="projectModalTitle"></h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body" id="projectModalBody">
+            <!-- Project details will be populated by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="index.js"></script>
+</html>
