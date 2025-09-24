@@ -1219,3 +1219,6 @@ body::before {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
+.text-decoration-none {
+  /* color: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+}
