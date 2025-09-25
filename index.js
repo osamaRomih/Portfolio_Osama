@@ -17,6 +17,21 @@ document.addEventListener("DOMContentLoaded", function () {
   initializeScrollToTop();
 });
 
+const messageInput = document.getElementById("message");
+const charCount = document.getElementById("charCount");
+const maxLength = messageInput.getAttribute("maxlength");
+
+messageInput.addEventListener("input", () => {
+  const length = messageInput.value.length;
+  charCount.textContent = `${length} / ${maxLength}`;
+
+  // لو وصل الحد الأقصى خليه باللون الأحمر
+  if (length >= maxLength) {
+    charCount.style.color = "red";
+  } else {
+    charCount.style.color = "";
+  }
+});
 // Theme Management
 function initializeTheme() {
   document.documentElement.setAttribute("data-theme", currentTheme);
@@ -68,17 +83,21 @@ function toggleLanguage(lang) {
 }
 
 function updateLanguage() {
+  // للعناصر النصية العادية
   document.querySelectorAll("[data-en][data-ar]").forEach((element) => {
     const text = currentLang === "ar" ? element.dataset.ar : element.dataset.en;
-    if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
+    element.textContent = text;
+  });
+
+  // لعناصر الإدخال (input / textarea)
+  document
+    .querySelectorAll("[data-en-placeholder][data-ar-placeholder]")
+    .forEach((element) => {
       element.placeholder =
         currentLang === "ar"
           ? element.dataset.arPlaceholder
           : element.dataset.enPlaceholder;
-    } else {
-      element.textContent = text;
-    }
-  });
+    });
 }
 
 document.querySelectorAll(".lang-btn").forEach((btn) => {
@@ -166,92 +185,106 @@ const skillsData = [
   {
     name: "HTML5",
     icon: "fab fa-html5",
-    progress: 95,
     category: "frontend",
   },
   {
     name: "CSS3",
     icon: "fab fa-css3-alt",
-    progress: 90,
     category: "frontend",
   },
   {
     name: "SCSS",
     icon: "fab fa-sass",
-    progress: 85,
     category: "frontend",
   },
   {
     name: "JavaScript",
     icon: "fab fa-js-square",
-    progress: 90,
     category: "frontend",
   },
   {
     name: "TypeScript",
     icon: "fas fa-code",
-    progress: 85,
     category: "frontend",
   },
   {
     name: "Angular",
     icon: "fab fa-angular",
-    progress: 90,
+    category: "frontend",
+  },
+  {
+    name: "Ng-Bootstrap",
+    icon: "fas fa-cube",
+    category: "frontend",
+  },
+  {
+    name: "Tailwind",
+    icon: "fas fa-wind",
+    category: "frontend",
+  },
+  {
+    name: "RxJS",
+    icon: "fas fa-random",
     category: "frontend",
   },
   {
     name: "Bootstrap",
     icon: "fab fa-bootstrap",
-    progress: 85,
     category: "frontend",
   },
   {
     name: "Git",
     icon: "fab fa-git-alt",
-    progress: 85,
     category: "tools",
   },
   {
     name: "GitHub",
     icon: "fab fa-github",
-    progress: 85,
     category: "tools",
   },
   {
     name: "Azure",
     icon: "fab fa-microsoft",
-    progress: 75,
     category: "cloud",
+  },
+  {
+    name: "Firebase",
+    icon: "fas fa-fire",
+    category: "cloud",
+  },
+  {
+    name: "Docker",
+    icon: "fab fa-docker",
+    category: "tools",
   },
   {
     name: "Node.js",
     icon: "fab fa-node-js",
-    progress: 80,
     category: "backend",
   },
   {
     name: "Express",
     icon: "fas fa-server",
-    progress: 75,
     category: "backend",
   },
   {
     name: "MongoDB",
     icon: "fas fa-database",
-    progress: 70,
     category: "database",
   },
-  { name: "PHP", icon: "fab fa-php", progress: 75, category: "backend" },
+  {
+    name: "PHP",
+    icon: "fab fa-php",
+    category: "backend",
+  },
   {
     name: "Networking",
     icon: "fas fa-network-wired",
-    progress: 70,
     category: "other",
   },
   {
     name: "Problem Solving",
     icon: "fas fa-puzzle-piece",
-    progress: 95,
     category: "soft",
   },
 ];
@@ -270,64 +303,16 @@ function initializeSkills() {
     skillElement.style.animationDelay = `${index * 0.1}s`;
 
     skillElement.innerHTML = `
-                    <div class="skill-item" onclick="showSkillDetails('${skill.name}')">
-                        <div class="skill-icon">
-                            <i class="${skill.icon}"></i>
-                        </div>
-                        <h6>${skill.name}</h6>
-                        <div class="progress-circle">
-                            <svg>
-                                <defs>
-                                    <linearGradient id="gradient-${index}">
-                                        <stop offset="0%" stop-color="#667eea"/>
-                                        <stop offset="100%" stop-color="#764ba2"/>
-                                    </linearGradient>
-                                </defs>
-                                <circle class="progress-bg" cx="40" cy="40" r="35"></circle>
-                                <circle class="progress-bar" cx="40" cy="40" r="35" 
-                                        stroke="url(#gradient-${index})" 
-                                        data-progress="${skill.progress}"></circle>
-                            </svg>
-                            <div class="progress-text">${skill.progress}%</div>
-                        </div>
-                    </div>
-                `;
+      <div class="skill-item">
+        <div class="skill-icon">
+          <i class="${skill.icon}"></i>
+        </div>
+        <h6>${skill.name}</h6>
+      </div>
+    `;
 
     skillsGrid.appendChild(skillElement);
   });
-
-  // Animate progress circles when visible
-  setTimeout(() => {
-    const progressObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const progressBar = entry.target.querySelector(".progress-bar");
-          if (progressBar) {
-            const progress = progressBar.dataset.progress;
-            const circumference = 2 * Math.PI * 35;
-            const offset = circumference - (progress / 100) * circumference;
-
-            setTimeout(() => {
-              progressBar.style.strokeDashoffset = offset;
-            }, 500);
-          }
-        }
-      });
-    });
-
-    document.querySelectorAll(".skill-item").forEach((item) => {
-      progressObserver.observe(item);
-    });
-  }, 100);
-}
-
-function showSkillDetails(skillName) {
-  const skill = skillsData.find((s) => s.name === skillName);
-  if (skill) {
-    alert(
-      `${skill.name}: ${skill.progress}% proficiency\nCategory: ${skill.category}`
-    );
-  }
 }
 
 // Projects Data and Initialization
@@ -392,7 +377,7 @@ const projectsData = [
     id: 5,
     name: "SummaryCamp",
     nameAr: "مخيم الملخصات",
-    type: "Heavy",
+    type: "Small",
     category: "fullstack",
     description: "Educational content summarization",
     descriptionAr: "تلخيص المحتوى التعليمي",
@@ -449,7 +434,7 @@ const projectsData = [
     id: 9,
     name: "Clinic Management",
     nameAr: "إدارة العيادة",
-    type: "Small",
+    type: "Heavy",
     category: "fullstack",
     description: "Medical clinic management (In Progress)",
     descriptionAr: "إدارة العيادات الطبية (قيد العمل)",
@@ -686,28 +671,43 @@ function initializeForms() {
 }
 
 function handleFormSubmission(form) {
-  // Simulate form submission
-  const formData = new FormData(form);
+  const name = form.querySelector("#name").value;
+  const email = form.querySelector("#email").value;
+  const message = form.querySelector("#message").value;
+  const phone = form.querySelector("#phone").value;
+  const subject = form.querySelector("#subject").value;
 
-  // Show loading state
+  const phoneNumber = "201092225678";
+  const whatsappMessage = `مرحبا، اسمي ${name}%0Aالبريد: ${email}%0Aالهاتف: ${phone}%0Aالموضوع: ${subject}%0Aالرسالة: ${message}`;
+
+  // زر الإرسال
   const submitBtn = form.querySelector('button[type="submit"]');
   const originalText = submitBtn.textContent;
   submitBtn.textContent =
     currentLang === "ar" ? "جاري الإرسال..." : "Sending...";
   submitBtn.disabled = true;
 
-  // Simulate API call
+  // محاكاة إرسال (زي API call)
   setTimeout(() => {
+    // فتح واتساب
+    window.open(
+      `https://wa.me/${phoneNumber}?text=${whatsappMessage}`,
+      "_blank"
+    );
+
+    // Alert نجاح
     alert(
       currentLang === "ar"
         ? "تم إرسال الرسالة بنجاح!"
         : "Message sent successfully!"
     );
+
+    // Reset form
     form.reset();
     submitBtn.textContent = originalText;
     submitBtn.disabled = false;
 
-    // Close modal if it's the modal form
+    // إغلاق المودال لو هو مودال
     if (form.id === "modalContactForm") {
       bootstrap.Modal.getInstance(
         document.getElementById("contactModal")
@@ -780,40 +780,13 @@ function openContactForm() {
 }
 
 function downloadCV() {
-  // Create a sample CV download
-  const cvContent = `
-                Osama Romih - Full Stack Developer
-                
-                Experience: 4+ Years
-                
-                Skills:
-                - Frontend: Angular, TypeScript, HTML5, CSS3, SCSS, Bootstrap
-                - Backend: Node.js, Express, PHP
-                - Database: MongoDB, MySQL, PostgreSQL
-                - Tools: Git, GitHub, Azure, Docker
-                
-                Projects:
-                - CareerOfficer: Career management platform
-                - Tartibat: Company management system
-                - Qurani: Quranic learning platform
-                - Travel Egypt Vacation: Tourism booking platform
-                - SummaryCamp: Educational content summarization
-                - Dajen ERP: Complete ERP system
-                
-                Contact:
-                Email: osamaromih2020@gmail.com
-                Phone: +201092225678
-            `;
-
-  const blob = new Blob([cvContent], { type: "text/plain" });
-  const url = URL.createObjectURL(blob);
+  const cvPath = "assets/Osama_Romih_CV.pdf"; // مسار ملفك داخل assets
   const a = document.createElement("a");
-  a.href = url;
-  a.download = "Osama_Romih_CV.txt";
+  a.href = cvPath;
+  a.download = "Osama_Romih_CV.pdf"; // الاسم اللي هينزل بيه
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
-  URL.revokeObjectURL(url);
 }
 
 // Parallax Effect
