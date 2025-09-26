@@ -1,6 +1,6 @@
 // Global variables
-let currentLang = "ar";
-let currentTheme = localStorage.getItem("theme") || "light";
+let currentLang = localStorage.getItem("lang") || "en";
+let currentTheme = localStorage.getItem("theme") || "dark";
 
 // Initialize
 document.addEventListener("DOMContentLoaded", function () {
@@ -67,6 +67,9 @@ function initializeDigitalBackground() {
 // Language Management
 function initializeLanguage() {
   updateLanguage();
+  document.querySelectorAll(".lang-btn").forEach((btn) => {
+    btn.classList.toggle("active", btn.dataset.lang === currentLang);
+  });
 }
 
 function toggleLanguage(lang) {

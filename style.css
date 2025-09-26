@@ -10,8 +10,9 @@
   --border-color: #e2e8f0;
   --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.15);
+  --font-ar: "Cairo", sans-serif;
+  --font-en: "Poppins", sans-serif;
 }
-
 [data-theme="dark"] {
   --text-primary: #f7fafc;
   --text-secondary: #e2e8f0;
@@ -793,7 +794,40 @@ body::before {
 
 /* Stats */
 .stats {
-  background: var(--bg-secondary);
+  /* background: var(--bg-secondary); */
+  background: url(./assets/hero-bg.png) center left;
+  background-size: cover;
+  padding: 150px 0px;
+  border-radius: 0px;
+  overflow: hidden;
+  position: relative;
+  background-attachment: fixed;
+}
+
+/* Overlay */
+#stats::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  z-index: 0;
+  opacity: 0.6;
+}
+
+/* Ensure content above overlay */
+#stats .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Styling stat items */
+.stat-item {
+  color: #fff;
 }
 
 .stat-item {
@@ -810,7 +844,7 @@ body::before {
 
 .stat-label {
   font-size: 1.1rem;
-  color: var(--text-secondary);
+  color: #fff;
   margin-top: 0.5rem;
 }
 
@@ -1218,4 +1252,90 @@ body::before {
 .btn-light:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+html[lang="ar"] {
+  font-family: "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+html[lang="en"] {
+  font-family: var(--font-en);
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+p,
+span,
+a,
+li,
+button,
+input {
+  font-family: "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+#testimonials {
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.testimonials-container {
+  display: flex;
+  gap: 2rem;
+  transition: transform 0.8s ease-in-out;
+}
+
+.testimonial-card {
+  min-width: 300px;
+  max-width: 350px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.testimonial-text {
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.testimonial-author {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.testimonial-role {
+  font-size: 0.9rem;
+  color: #666;
 }
