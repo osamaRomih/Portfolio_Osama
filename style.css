@@ -577,7 +577,9 @@ body::before {
   transform: translateX(-50%);
   animation: bounce 2s infinite;
 }
-
+.scroll-indicator i::before {
+  color: white;
+}
 @keyframes bounce {
   0%,
   20%,
@@ -1338,4 +1340,14 @@ input {
 .testimonial-role {
   font-size: 0.9rem;
   color: #666;
+}
+
+#digitalBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: #0d0d0d;
 }

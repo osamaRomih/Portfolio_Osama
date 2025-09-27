@@ -66,8 +66,8 @@
 
   <body>
     <!-- Global Digital Background -->
-    <div class="digital-background" id="digitalBackground"></div>
-    <!-- <canvas id="digitalBackground"></canvas> -->
+    <!-- <div class="digital-background" id="digitalBackground"></div> -->
+    <canvas id="digitalBackground"></canvas>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
       <div class="container">
@@ -85,18 +85,26 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#home" data-en="Home" data-ar="الرئيسية"
+              <a
+                class="nav-link text-light"
+                href="#home"
+                data-en="Home"
+                data-ar="الرئيسية"
                 >الرئيسية</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about" data-en="About" data-ar="نبذة"
+              <a
+                class="nav-link text-light"
+                href="#about"
+                data-en="About"
+                data-ar="نبذة"
                 >نبذة</a
               >
             </li>
             <li class="nav-item">
               <a
-                class="nav-link"
+                class="nav-link text-light"
                 href="#skills"
                 data-en="Skills"
                 data-ar="المهارات"
@@ -105,7 +113,7 @@
             </li>
             <li class="nav-item">
               <a
-                class="nav-link"
+                class="nav-link text-light"
                 href="#projects"
                 data-en="Projects"
                 data-ar="المشاريع"
@@ -114,7 +122,7 @@
             </li>
             <li class="nav-item">
               <a
-                class="nav-link"
+                class="nav-link text-light"
                 href="#stats"
                 data-en="Stats"
                 data-ar="الإحصائيات"
@@ -123,7 +131,7 @@
             </li>
             <li class="nav-item">
               <a
-                class="nav-link"
+                class="nav-link text-light"
                 href="#contact"
                 data-en="Contact"
                 data-ar="تواصل"
@@ -200,19 +208,19 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6 hero-content slide-in-left">
-            <p class="mb-3" data-en="Hi, I'm" data-ar="مرحباً، أنا">
+            <p class="mb-3 text-light" data-en="Hi, I'm" data-ar="مرحباً، أنا">
               مرحباً، أنا
             </p>
             <h1 class="gradient-text">Osama Romih</h1>
             <h2
-              class="hero-subtitle"
+              class="hero-subtitle text-light"
               data-en="Full Stack Developer"
               data-ar="مطور ويب متكامل"
             >
               مطور ويب متكامل
             </h2>
             <p
-              class="hero-description"
+              class="hero-description text-light"
               data-en="Full Stack Developer specializing in building interactive applications using Angular and Node.js, with expertise in modern UI development and powerful APIs to deliver digital solutions that drive business growth."
               data-ar="مطور ويب متخصص في بناء تطبيقات تفاعلية باستخدام Angular و Node.js، مع خبرة في تطوير واجهات المستخدم الحديثة وبناء APIs قوية لتقديم حلول رقمية تدعم نمو الأعمال."
             >
@@ -272,7 +280,7 @@
           نبذة عني
         </h2>
         <div class="row">
-          <div class="col-lg-6 fade-in">
+          <div class="col-lg-6 fade-in" style="padding: 0 70px">
             <p
               class="lead mb-4 fs-3"
               data-en="I'm a passionate Full Stack Developer with over 3 years of experience creating robust web applications and digital solutions."
@@ -924,6 +932,7 @@
               <div class="row">
                 <div class="col-md-6 mb-3">
                   <input
+                    id="name"
                     type="text"
                     class="form-control"
                     placeholder="الاسم"
@@ -935,6 +944,7 @@
                 <div class="col-md-6 mb-3">
                   <input
                     type="email"
+                    id="email"
                     class="form-control"
                     placeholder="البريد الإلكتروني"
                     data-en-placeholder="Email"
@@ -943,47 +953,61 @@
                   />
                 </div>
               </div>
-              <div class="mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="الموضوع"
-                  data-en-placeholder="Subject"
-                  data-ar-placeholder="الموضوع"
-                  required
-                />
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="phone"
+                    placeholder="الهاتف"
+                    data-en-placeholder="Phone"
+                    data-ar-placeholder="الهاتف"
+                    required
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <input
+                    type="text"
+                    id="subject"
+                    class="form-control"
+                    placeholder="الموضوع"
+                    data-en-placeholder="Subject"
+                    data-ar-placeholder="الموضوع"
+                    required
+                  />
+                </div>
               </div>
               <div class="mb-3">
                 <textarea
                   class="form-control"
                   rows="4"
+                  id="message"
                   placeholder="الرسالة"
                   data-en-placeholder="Message"
                   data-ar-placeholder="الرسالة"
                   required
                 ></textarea>
               </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-outline"
+                  data-bs-dismiss="modal"
+                  data-en="Close"
+                  data-ar="إغلاق"
+                >
+                  إغلاق
+                </button>
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  data-en="Send WhatsApp"
+                  data-ar="إرسال واتس اب"
+                >
+                  إرسال واتس اب
+                </button>
+              </div>
             </form>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-              data-en="Close"
-              data-ar="إغلاق"
-            >
-              إغلاق
-            </button>
-            <button
-              type="submit"
-              form="modalContactForm"
-              class="btn btn-primary"
-              data-en="Send Message"
-              data-ar="إرسال الرسالة"
-            >
-              إرسال الرسالة
-            </button>
           </div>
         </div>
       </div>
