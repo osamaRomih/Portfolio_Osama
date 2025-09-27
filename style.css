@@ -1351,3 +1351,28 @@ input {
   z-index: -1;
   background: #0d0d0d;
 }
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 28px;
+  color: #fff;
+  animation: typing 4s steps(15) infinite;
+}
+
+/* حركة الكتابة */
+@keyframes typing {
+  0% {
+    width: 0ch;
+  }
+  40% {
+    width: 15ch;
+  } /* عدد الحروف في الجملة */
+  60% {
+    width: 40ch;
+  }
+  100% {
+    width: 0ch;
+  }
+}

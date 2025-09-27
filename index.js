@@ -325,7 +325,7 @@ const projectsData = [
     name: "CareerOfficer",
     nameAr: "مشروع كرير اوفسير",
     type: "Heavy",
-    category: "fullstack",
+    category: "frontend",
     description: "Comprehensive career management platform",
     descriptionAr: "منصة شاملة لإدارة المسار المهني",
     tags: ["Angular", "Node.js", "MongoDB", "Azure"],
@@ -338,7 +338,7 @@ const projectsData = [
     name: "Tartibat",
     nameAr: "ترتيبات",
     type: "Heavy",
-    category: "fullstack",
+    category: "frontend",
     description: "Company management system",
     descriptionAr: "نظام إدارة شركات",
     tags: ["Angular", "PHP", "MySQL", "Bootstrap"],
@@ -355,7 +355,7 @@ const projectsData = [
     name: "Qurani",
     nameAr: "مشروع قرآني",
     type: "Heavy",
-    category: "frontend",
+    category: "fullstack",
     description: "Quranic learning platform",
     descriptionAr: "منصة تعلم القرآن الكريم",
     tags: ["Angular", "TypeScript", "SCSS", "PWA"],
@@ -486,13 +486,7 @@ function initializeProjects() {
                             <span class="project-type">${project.type}</span>
                             <h5>${projectName}</h5>
                             <p>${projectDesc}</p>
-                            <div class="project-tags">
-                                ${project.tags
-                                  .map(
-                                    (tag) => `<span class="tag">${tag}</span>`
-                                  )
-                                  .join("")}
-                            </div>
+                         
                             <button class="btn btn-outline mt-3" onclick="showProjectDetails(${
                               project.id
                             })">
