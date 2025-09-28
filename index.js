@@ -326,12 +326,27 @@ const projectsData = [
     nameAr: "مشروع كرير اوفسير",
     type: "Heavy",
     category: "frontend",
-    description: "Comprehensive career management platform",
-    descriptionAr: "منصة شاملة لإدارة المسار المهني",
+    description:
+      "An interactive educational platform designed to teach kids coding through fun games, quizzes, and challenges.",
+    descriptionAr:
+      "منصة تعليمية تفاعلية تهدف إلى تعليم الأطفال البرمجة بطريقة شيقة من خلال الألعاب والأسئلة التفاعلية والتحديات الممتعة.",
     tags: ["Angular", "Node.js", "MongoDB", "Azure"],
     icon: "fas fa-briefcase",
-    features: ["User Management", "Career Tracking", "Analytics Dashboard"],
-    tech: ["Angular 15", "Node.js", "Express", "MongoDB", "Azure DevOps"],
+    features: [
+      "Gamified learning experience",
+      "Interactive coding quizzes",
+      "Child-friendly dashboard",
+      "Progress tracking for parents and teachers",
+    ],
+    tech: [
+      "Angular 16",
+      "Firebase",
+      "TypeScript",
+      "HTML5",
+      "SCSS",
+      "Azure DevOps",
+      "Git",
+    ],
   },
   {
     id: 2,
@@ -339,29 +354,50 @@ const projectsData = [
     nameAr: "ترتيبات",
     type: "Heavy",
     category: "frontend",
-    description: "Company management system",
-    descriptionAr: "نظام إدارة شركات",
+    description:
+      "A comprehensive company management system that handles projects, employees, HR processes such as payroll, leave requests, vacations, as well as reports and financial accounts.",
+    descriptionAr:
+      "نظام شامل لإدارة الشركات والمشاريع والموظفين والموارد البشرية مثل كشوف المرتبات وطلبات الإجازة والإجازات، بالإضافة إلى التقارير والحسابات المالية.",
     tags: ["Angular", "PHP", "MySQL", "Bootstrap"],
     icon: "fas fa-building",
     features: [
-      "Company Registration",
-      "Document Management",
-      "Workflow Automation",
+      "Company & Project Management",
+      "Employee & HR Management",
+      "Payroll & Leave Requests",
+      "Reports & Analytics",
+      "Financial Accounts Tracking",
     ],
-    tech: ["Angular 14", "PHP 8", "MySQL", "Bootstrap 5"],
+    tech: [
+      "Angular 17",
+      "Firebase",
+      "TypeScript",
+      "HTML5",
+      "SCSS",
+      "Azure DevOps",
+      "Git",
+    ],
   },
   {
     id: 3,
-    name: "Qurani",
+    name: "Quraan.me",
     nameAr: "مشروع قرآني",
     type: "Heavy",
     category: "fullstack",
-    description: "Quranic learning platform",
-    descriptionAr: "منصة تعلم القرآن الكريم",
-    tags: ["Angular", "TypeScript", "SCSS", "PWA"],
+    description:
+      "An educational platform focused on teaching and memorizing the Holy Quran and Islamic studies, providing interactive sessions between students and teachers with integrated booking and payment features.",
+    descriptionAr:
+      "منصة تعليمية تهدف إلى تحفيظ القرآن الكريم والمواد التعليمية الدينية، مع إتاحة جلسات مباشرة بين الطالب والمعلم، بالإضافة إلى خاصية الحجز والدفع للمواعيد.",
+    tags: ["Angular", "TypeScript", "SCSS", "PWA", "Firebase", "Node.js"],
     icon: "fas fa-book-open",
-    features: ["Quran Reading", "Audio Recitation", "Progress Tracking"],
-    tech: ["Angular 16", "TypeScript", "SCSS", "Service Worker"],
+    features: [
+      "Quran Reading & Memorization",
+      "Audio Recitation",
+      "Live Student-Teacher Sessions",
+      "Class Booking & Scheduling",
+      "Online Payments",
+      "Progress Tracking",
+    ],
+    tech: ["Angular 16", "TypeScript", "SCSS", "HTML5", "Firebase", "Node.js"],
   },
   {
     id: 4,
@@ -369,12 +405,52 @@ const projectsData = [
     nameAr: "رحلات مصر",
     type: "Heavy",
     category: "fullstack",
-    description: "Tourism booking platform",
-    descriptionAr: "منصة حجز سياحي",
-    tags: ["Angular", "Node.js", "Stripe", "Maps API"],
+    description:
+      "A tourism booking platform for international visitors to Egypt, offering vacation packages across all governorates with interactive maps for each location. The system includes both a web portal for users and an admin portal to manage the website, employees, packages, tourist attractions, bookings, and promotions, with multi-language support.",
+    descriptionAr:
+      "منصة حجز سياحية مخصصة للأجانب في مصر، توفر باقات متنوعة لزيارة المعالم السياحية في جميع محافظات مصر مع تحديد موقع كل محافظة على الخريطة. يشمل النظام بورتل ويب للمستخدمين وبورتل أدمن لإدارة الموقع والموظفين والباقات والمعالم السياحية وعمليات الحجز والعروض، مع دعم لأكثر من لغة.",
+    tags: ["Angular", "Node.js", "Stripe", "Maps API", "i18n"],
     icon: "fas fa-plane",
-    features: ["Trip Booking", "Payment Integration", "Interactive Maps"],
-    tech: ["Angular 15", "Node.js", "Stripe API", "Google Maps API"],
+    features: [
+      "Tour Packages Across Egypt",
+      "Interactive Maps for Governorates",
+      "Online Trip Booking",
+      "Secure Payment Integration",
+      "Multi-language Support",
+      "Admin Portal for Management",
+      "Offers & Promotions",
+    ],
+    tech: [
+      "Angular 17",
+      "Firebase",
+      "TypeScript",
+      "HTML5",
+      "SCSS",
+      "Azure DevOps",
+      "Git",
+    ],
+  },
+  {
+    id: 7,
+    name: "Personal Portfolio Websites",
+    nameAr: "مواقع شخصية وعرض الأعمال السابقة",
+    type: "Small",
+    category: "frontend",
+    description:
+      "A personal and educational portfolio website designed for professionals such as teachers, doctors, and engineers to showcase their specialties, certificates, experiences, and identities. The platform also includes features for announcements, contact, and professional branding.",
+    descriptionAr:
+      "موقع بورتفوليو شخصي وتعليمي مخصص للمدرسين والدكاترة والمهندسين وغيرهم، يتيح لهم عرض تخصصاتهم، شهاداتهم، خبراتهم، وهوياتهم، بالإضافة إلى الإعلان عن خدماتهم والتواصل معهم وتعزيز علامتهم المهنية.",
+    tags: ["HTML", "CSS", "JavaScript", "Bootstrap"],
+    icon: "fas fa-chalkboard-teacher",
+    features: [
+      "Responsive Personal Website",
+      "Professional Profile & Bio",
+      "Certificates & Experience Showcase",
+      "Announcements & Services",
+      "Contact Form & Communication",
+      "Professional Branding",
+    ],
+    tech: ["HTML5", "CSS3", "JavaScript ES6", "Bootstrap 5", "Tailwind CSS"],
   },
   {
     id: 5,
@@ -382,16 +458,82 @@ const projectsData = [
     nameAr: "مخيم الملخصات",
     type: "Small",
     category: "fullstack",
-    description: "Educational content summarization",
-    descriptionAr: "تلخيص المحتوى التعليمي",
-    tags: ["Angular", "AI/ML", "Node.js", "NLP"],
+    description:
+      "A summer educational camp management system that allows student registration from KG1 to high school, with options to select subjects, study shifts (morning/evening), online or offline learning, and preferred branch. The system also manages payment methods, making summer learning engaging and fun for kids.",
+    descriptionAr:
+      "نظام لإدارة مخيم صيفي تعليمي يتيح تسجيل الطلاب من مرحلة كيجي 1 حتى المرحلة الثانوية، مع إمكانية تحديد المواد الدراسية، واختيار الفترة (صباحية أو مسائية)، والدراسة أونلاين أو أوفلاين أو الاثنين معًا، بالإضافة إلى اختيار الفرع المناسب. كما يشمل النظام طرق الدفع المختلفة، ليجعل التعلم في الصيف ممتعًا وجذابًا للأطفال.",
+    tags: ["Angular", "AI/ML", "Node.js", "NLP", "Firebase"],
     icon: "fas fa-file-alt",
-    features: ["Content Analysis", "AI Summarization", "User Dashboard"],
+    features: [
+      "Student Registration (KG1 to High School)",
+      "Subject & Schedule Selection",
+      "Online/Offline/Hybrid Learning Options",
+      "Multi-branch Management",
+      "Payment Integration",
+      "Engaging Summer Learning Experience",
+    ],
     tech: [
       "Angular 16",
-      "Node.js",
-      "OpenAI API",
-      "Natural Language Processing",
+      "Firebase",
+      "TypeScript",
+      "HTML5",
+      "SCSS",
+      "Azure DevOps",
+      "Git",
+    ],
+  },
+  {
+    id: 9,
+    name: "Clinic Management",
+    nameAr: "إدارة العيادة",
+    type: "Heavy",
+    category: "fullstack",
+    description:
+      "A complete medical clinic management system (In Progress) designed for doctors to manage patient records, appointment scheduling, electronic prescriptions, doctor’s notes, payment operations, and patient medical history with real-time updates.",
+    descriptionAr:
+      "نظام متكامل لإدارة العيادات الطبية (قيد العمل) مخصص للأطباء لإدارة سجلات المرضى، وحجز المواعيد، وإنشاء روشتات إلكترونية، وصفحة ملاحظات للطبيب، وإجراء عمليات الدفع، وعرض التاريخ المرضي للمريض مع تحديثات لحظية.",
+    tags: ["Angular", "Node.js", "MongoDB", "Socket.io"],
+    icon: "fas fa-stethoscope",
+    features: [
+      "Patient Records Management",
+      "Appointment Scheduling",
+      "Electronic Prescriptions",
+      "Doctor Notes Page",
+      "Payment Operations",
+      "Patient Medical History",
+      "Real-time Updates",
+    ],
+    tech: ["Angular 17", "Node.js", "MongoDB", "Socket.io"],
+  },
+  {
+    id: 8,
+    name: "StoryStore",
+    nameAr: "متجر القصص",
+    type: "Small",
+    category: "frontend",
+    description:
+      "An online children’s story marketplace that allows users to personalize stories by changing the hero’s name, age, appearance, and more. The platform supports story booking, secure payments, delivery, returns, and customer support.",
+    descriptionAr:
+      "متجر إلكتروني لقصص الأطفال يتيح للمستخدم تخصيص القصة من خلال تغيير اسم البطل، شكله، سنه، ولونه، بما يناسب الطفل. كما يوفر النظام إمكانية حجز القصة بعد التخصيص، وإجراء عملية الدفع والتوصيل، مع دعم خيار الاسترجاع والتواصل مع خدمة العملاء أو صاحب المتجر.",
+    tags: ["Angular", "TypeScript", "SCSS", "Animations"],
+    icon: "fas fa-book",
+    features: [
+      "Personalized Children’s Stories",
+      "Story Catalog & Search",
+      "Character Customization (Name, Age, Appearance)",
+      "Booking & Secure Payment",
+      "Order Tracking & Delivery",
+      "Returns & Refunds",
+      "Customer Support & Contact",
+    ],
+    tech: [
+      "Angular 17",
+      "Firebase",
+      "TypeScript",
+      "HTML5",
+      "SCSS",
+      "Azure DevOps",
+      "Git",
     ],
   },
   {
@@ -400,55 +542,29 @@ const projectsData = [
     nameAr: "داجن",
     type: "Heavy",
     category: "fullstack",
-    description: "Complete ERP system",
-    descriptionAr: "نظام تخطيط موارد المؤسسة",
-    tags: ["Angular", "Node.js", "PostgreSQL", "Docker"],
+    description:
+      "A complete ERP system designed to manage business operations, including accounting, supply and purchase processes, sales management, employee management, inventory control, daily reports, expenses, vendors, and point-of-sale operations.",
+    descriptionAr:
+      "نظام ERP متكامل يهدف إلى إدارة العمليات المحاسبية والمالية من توريدات ومشتريات ومبيعات، بالإضافة إلى إدارة الموظفين والمخازن، وإصدار تقارير يومية دقيقة، وإدارة المصروفات والتجار ومنافذ البيع.",
+    tags: ["Angular", "Node.js", "PostgreSQL", "Docker", "Redis"],
     icon: "fas fa-chart-pie",
-    features: ["HR Management", "Sales", "Inventory", "Financial Reports"],
-    tech: ["Angular 17", "Node.js", "PostgreSQL", "Docker", "Redis"],
-  },
-  {
-    id: 7,
-    name: "Teacher Portfolio",
-    nameAr: "بورتفوليو المعلم",
-    type: "Small",
-    category: "frontend",
-    description: "Educational portfolio website",
-    descriptionAr: "موقع بورتفوليو تعليمي",
-    tags: ["HTML", "CSS", "JavaScript", "Bootstrap"],
-    icon: "fas fa-chalkboard-teacher",
-    features: ["Responsive Design", "Course Showcase", "Contact Form"],
-    tech: ["HTML5", "CSS3", "JavaScript ES6", "Bootstrap 5"],
-  },
-  {
-    id: 8,
-    name: "StoryStore",
-    nameAr: "متجر القصص",
-    type: "Small",
-    category: "frontend",
-    description: "Children stories marketplace",
-    descriptionAr: "متجر قصص الأطفال",
-    tags: ["Angular", "TypeScript", "SCSS", "Animations"],
-    icon: "fas fa-book",
-    features: ["Story Catalog", "Interactive Reading", "Purchase System"],
-    tech: ["Angular 15", "TypeScript", "SCSS", "Angular Animations"],
-  },
-  {
-    id: 9,
-    name: "Clinic Management",
-    nameAr: "إدارة العيادة",
-    type: "Heavy",
-    category: "fullstack",
-    description: "Medical clinic management (In Progress)",
-    descriptionAr: "إدارة العيادات الطبية (قيد العمل)",
-    tags: ["Angular", "Node.js", "MongoDB", "Socket.io"],
-    icon: "fas fa-stethoscope",
     features: [
-      "Patient Records",
-      "Appointment Scheduling",
-      "Real-time Updates",
+      "Supply & Purchase Management",
+      "Sales & POS Operations",
+      "Employee & HR Management",
+      "Inventory & Warehouse Control",
+      "Daily Financial Reports",
+      "Expenses & Vendor Management",
     ],
-    tech: ["Angular 17", "Node.js", "MongoDB", "Socket.io"],
+    tech: [
+      "Angular 17",
+      "Firebase",
+      "TypeScript",
+      "HTML5",
+      "SCSS",
+      "Azure DevOps",
+      "Git",
+    ],
   },
 ];
 
@@ -525,8 +641,8 @@ function showProjectDetails(projectId) {
   title.textContent = projectName;
   body.innerHTML = `
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="project-image mb-3" style="height: 300px; border-radius: 15px;">
+                    <div class="col-md-6 p-3">
+                        <div class="project-image mb-3" style="height:auto; border-radius: 15px;">
                             <i class="${
                               project.icon
                             }" style="font-size: 4rem;"></i>
@@ -553,25 +669,25 @@ function showProjectDetails(projectId) {
                               .map((tech) => `<span class="tag">${tech}</span>`)
                               .join("")}
                         </div>
-                        <div class="mt-4">
-                            <button class="btn btn-primary me-2" onclick="window.open('#', '_blank')">
-                                ${
-                                  currentLang === "ar"
-                                    ? "عرض مباشر"
-                                    : "Live Demo"
-                                }
-                            </button>
-                            <button class="btn btn-outline" onclick="window.open('#', '_blank')">
-                                ${
-                                  currentLang === "ar"
-                                    ? "الكود المصدري"
-                                    : "Source Code"
-                                }
-                            </button>
                         </div>
-                    </div>
-                </div>
-            `;
+                        </div>
+                        `;
+  // <div class="mt-4">
+  //     <button class="btn btn-primary me-2" onclick="window.open('#', '_blank')">
+  //         ${
+  //           currentLang === "ar"
+  //             ? "عرض مباشر"
+  //             : "Live Demo"
+  //         }
+  //     </button>
+  //     <button class="btn btn-outline" onclick="window.open('#', '_blank')">
+  //         ${
+  //           currentLang === "ar"
+  //             ? "الكود المصدري"
+  //             : "Source Code"
+  //         }
+  //     </button>
+  // </div>
 
   modal.show();
 }

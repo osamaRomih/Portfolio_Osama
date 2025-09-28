@@ -748,6 +748,9 @@ body::before {
   box-shadow: var(--shadow);
   transition: all 0.3s ease;
   margin-bottom: 2rem;
+  height: 560px;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card:hover {
@@ -756,13 +759,14 @@ body::before {
 }
 
 .project-image {
-  height: 200px;
+  height: 100% !important;
   background: var(--primary-gradient);
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   font-size: 3rem;
+  /* aspect-ratio: 1 / 1; */
 }
 
 .project-content {
