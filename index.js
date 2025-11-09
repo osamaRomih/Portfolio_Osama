@@ -294,28 +294,35 @@ const skillsData = [
 
 function initializeSkills() {
   const skillsGrid = document.getElementById("skillsGrid");
+  if (!skillsGrid) return;
 
-  if (!skillsGrid) {
-    console.error("Skills grid not found");
-    return;
-  }
+  skillsGrid.innerHTML = "";
 
+  // عرض أول 12 فقط
+  const visibleCount = 12;
   skillsData.forEach((skill, index) => {
     const skillElement = document.createElement("div");
-    skillElement.className = "col-lg-3 col-md-4 col-sm-6 fade-in";
-    skillElement.style.animationDelay = `${index * 0.1}s`;
-
+    skillElement.className = "col-lg-3 col-md-4 col-sm-6 skill fade-in";
+    skillElement.style.animationDelay = `${index * 0.05}s`;
     skillElement.innerHTML = `
       <div class="skill-item">
-        <div class="skill-icon">
-          <i class="${skill.icon}"></i>
-        </div>
+        <div class="skill-icon"><i class="${skill.icon}"></i></div>
         <h6>${skill.name}</h6>
       </div>
     `;
-
+    // المهارات بعد 12 تكون مخفية مبدئياً
+    if (index >= visibleCount) skillElement.classList.add("hidden-skill");
     skillsGrid.appendChild(skillElement);
   });
+
+  // إنشاء زر عرض المزيد
+  const showMoreBtn = document.createElement("button");
+  showMoreBtn.id = "showMoreBtn";
+  showMoreBtn.className = "btn btn-outline mt-4 show-more-btn";
+  showMoreBtn.innerHTML = currentLang === "ar" ? "عرض المزيد ↓" : "Show More ↓";
+  skillsGrid.parentElement.appendChild(showMoreBtn);
+
+  showMoreBtn.addEventListener("click", toggleSkills);
 }
 
 // Projects Data and Initialization
@@ -1056,3 +1063,42 @@ window.addEventListener("resize", function () {
 
 init();
 animate();
+
+function toggleSkills() {
+  const hiddenSkills = document.querySelectorAll(".hidden-skill");
+  const showMoreBtn = document.getElementById("showMoreBtn");
+  const isHidden = hiddenSkills[0].classList.contains("fade-out");
+
+  if (isHidden) {
+    // إعادة إظهارها
+    hiddenSkills.forEach((el, i) => {
+      el.classList.remove("fade-out");
+      el.classList.add("fade-in");
+      el.style.display = "block";
+      el.style.animationDelay = `${i * 0.05}s`;
+    });
+    showMoreBtn.innerHTML = currentLang === "ar" ? "عرض أقل ↑" : "Show Less ↑";
+  } else {
+    // إخفاؤها مجدداً
+    hiddenSkills.forEach((el) => {
+      el.classList.remove("fade-in");
+      el.classList.add("fade-out");
+      setTimeout(() => (el.style.display = "none"), 400);
+    });
+    showMoreBtn.innerHTML =
+      currentLang === "ar" ? "عرض المزيد ↓" : "Show More ↓";
+  }
+}
+window.addEventListener("scroll", function () {
+  const navbar = document.querySelector(".navbar");
+  const isDarkMode = document.body.classList.contains("dark-mode"); // لو انت بتضيف كلاس للدرك مود
+
+  if (!isDarkMode) {
+    // فقط في الوضع الفاتح
+    if (window.scrollY > 100) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  }
+});

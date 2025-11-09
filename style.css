@@ -32,6 +32,10 @@
   color: var(--text-primary) !important;
 }
 
+/* [data-theme="light"] .light {
+  color: var(--bs-nav-link-color) !important;
+} */
+
 [data-theme="dark"] .navbar-brand {
   color: var(--text-primary) !important;
 }
@@ -918,6 +922,9 @@ body::before {
     justify-content: center;
     margin: 2rem 0;
   }
+  .hero-content h1 {
+    margin-top: 100px;
+  }
 
   .hero-content {
     text-align: center;
@@ -1379,4 +1386,44 @@ input {
   100% {
     width: 0ch;
   }
+}
+
+.show-more-btn {
+  display: block;
+
+  margin: 2rem auto 0;
+  padding: 12px 30px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.show-more-btn:hover {
+  transform: scale(1.05);
+  background: var(--primary-gradient) !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: white !important;
+}
+
+.navbar.scrolled .nav-link {
+  color: black !important;
+}
+.navbar .nav-link {
+  color: white !important;
+}
+
+/* الوضع الداكن */
+body.dark-mode .navbar {
+  background-color: #111 !important;
+}
+
+body.dark-mode .navbar .nav-link {
+  color: white !important;
 }
