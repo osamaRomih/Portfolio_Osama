@@ -328,83 +328,37 @@ function initializeSkills() {
 // Projects Data and Initialization
 const projectsData = [
   {
-    id: 1,
-    name: "CareerOfficer",
-    nameAr: "مشروع كرير اوفسير",
-    type: "Heavy",
-    category: "frontend",
-    description:
-      "An interactive educational platform designed to teach kids coding through fun games, quizzes, and challenges.",
-    descriptionAr:
-      "منصة تعليمية تفاعلية تهدف إلى تعليم الأطفال البرمجة بطريقة شيقة من خلال الألعاب والأسئلة التفاعلية والتحديات الممتعة.",
-    tags: ["Angular", "Node.js", "MongoDB", "Azure"],
-    icon: "fas fa-briefcase",
-    features: [
-      "Gamified learning experience",
-      "Interactive coding quizzes",
-      "Child-friendly dashboard",
-      "Progress tracking for parents and teachers",
-    ],
-    tech: [
-      "Angular 16",
-      "Firebase",
-      "TypeScript",
-      "HTML5",
-      "SCSS",
-      "Azure DevOps",
-      "Git",
-    ],
-  },
-  {
-    id: 2,
-    name: "Tartibat",
-    nameAr: "ترتيبات",
-    type: "Heavy",
-    category: "frontend",
-    description:
-      "A comprehensive company management system that handles projects, employees, HR processes such as payroll, leave requests, vacations, as well as reports and financial accounts.",
-    descriptionAr:
-      "نظام شامل لإدارة الشركات والمشاريع والموظفين والموارد البشرية مثل كشوف المرتبات وطلبات الإجازة والإجازات، بالإضافة إلى التقارير والحسابات المالية.",
-    tags: ["Angular", "PHP", "MySQL", "Bootstrap"],
-    icon: "fas fa-building",
-    features: [
-      "Company & Project Management",
-      "Employee & HR Management",
-      "Payroll & Leave Requests",
-      "Reports & Analytics",
-      "Financial Accounts Tracking",
-    ],
-    tech: [
-      "Angular 17",
-      "Firebase",
-      "TypeScript",
-      "HTML5",
-      "SCSS",
-      "Azure DevOps",
-      "Git",
-    ],
-  },
-  {
-    id: 3,
-    name: "Quraan.me",
-    nameAr: "مشروع قرآني",
+    id: 10,
+    name: "Iqraa Institute",
+    nameAr: "معهد اقرأ",
     type: "Heavy",
     category: "fullstack",
     description:
-      "An educational platform focused on teaching and memorizing the Holy Quran and Islamic studies, providing interactive sessions between students and teachers with integrated booking and payment features.",
+      "An advanced educational platform specialized in teaching Quran, Arabic language, Islamic studies, Tajweed, and Tafseer for both children and adults, including non-Arabic speakers. The system supports live sessions, student tracking, certifications, and complete institute management.",
     descriptionAr:
-      "منصة تعليمية تهدف إلى تحفيظ القرآن الكريم والمواد التعليمية الدينية، مع إتاحة جلسات مباشرة بين الطالب والمعلم، بالإضافة إلى خاصية الحجز والدفع للمواعيد.",
-    tags: ["Angular", "TypeScript", "SCSS", "PWA", "Firebase", "Node.js"],
-    icon: "fas fa-book-open",
+      "منصة تعليمية متقدمة متخصصة في تعليم القرآن الكريم، اللغة العربية، العلوم الإسلامية، التجويد والتفسير للصغار والكبار ولغير الناطقين بالعربية. يوفر النظام حصصًا مباشرة، وتتبع مستوى الطالب، وإصدار الشهادات والإجازات، مع نظام متكامل لإدارة المعهد.",
+    tags: ["Angular", "Node.js", "Firebase", "Video Streaming", "PWA"],
+    image: "./assets/projects/1.png",
     features: [
-      "Quran Reading & Memorization",
-      "Audio Recitation",
-      "Live Student-Teacher Sessions",
-      "Class Booking & Scheduling",
-      "Online Payments",
-      "Progress Tracking",
+      "Live One-to-One & Group Quran Classes",
+      "Arabic Language Courses for Non-Arabic Speakers",
+      "Tajweed & Tafseer Programs",
+      "Progress Tracking Dashboard",
+      "Online Certifications & Ijazah System",
+      "Teacher–Student Interactive Portal",
+      "Automated Attendance & Homework System",
+      "Multi-Branch & Multi-Language Support",
+      "Secure Online Payments",
     ],
-    tech: ["Angular 16", "TypeScript", "SCSS", "HTML5", "Firebase", "Node.js"],
+    tech: [
+      "Angular 18",
+      "TypeScript",
+      "SCSS",
+      "Firebase",
+      "Node.js",
+      "MongoDB",
+      "Git",
+    ],
   },
   {
     id: 4,
@@ -417,7 +371,7 @@ const projectsData = [
     descriptionAr:
       "منصة حجز سياحية مخصصة للأجانب في مصر، توفر باقات متنوعة لزيارة المعالم السياحية في جميع محافظات مصر مع تحديد موقع كل محافظة على الخريطة. يشمل النظام بورتل ويب للمستخدمين وبورتل أدمن لإدارة الموقع والموظفين والباقات والمعالم السياحية وعمليات الحجز والعروض، مع دعم لأكثر من لغة.",
     tags: ["Angular", "Node.js", "Stripe", "Maps API", "i18n"],
-    icon: "fas fa-plane",
+    image: "./assets/projects/5.png",
     features: [
       "Tour Packages Across Egypt",
       "Interactive Maps for Governorates",
@@ -448,7 +402,7 @@ const projectsData = [
     descriptionAr:
       "موقع بورتفوليو شخصي وتعليمي مخصص للمدرسين والدكاترة والمهندسين وغيرهم، يتيح لهم عرض تخصصاتهم، شهاداتهم، خبراتهم، وهوياتهم، بالإضافة إلى الإعلان عن خدماتهم والتواصل معهم وتعزيز علامتهم المهنية.",
     tags: ["HTML", "CSS", "JavaScript", "Bootstrap"],
-    icon: "fas fa-chalkboard-teacher",
+    image: "./assets/projects/poster.png",
     features: [
       "Responsive Personal Website",
       "Professional Profile & Bio",
@@ -460,6 +414,86 @@ const projectsData = [
     tech: ["HTML5", "CSS3", "JavaScript ES6", "Bootstrap 5", "Tailwind CSS"],
   },
   {
+    id: 1,
+    name: "CareerOfficer",
+    nameAr: "مشروع كرير اوفسير",
+    type: "Heavy",
+    category: "frontend",
+    description:
+      "An interactive educational platform designed to teach kids coding through fun games, quizzes, and challenges.",
+    descriptionAr:
+      "منصة تعليمية تفاعلية تهدف إلى تعليم الأطفال البرمجة بطريقة شيقة من خلال الألعاب والأسئلة التفاعلية والتحديات الممتعة.",
+    tags: ["Angular", "Node.js", "MongoDB", "Azure"],
+    image: "./assets/projects/Rectangle 3.png",
+    features: [
+      "Gamified learning experience",
+      "Interactive coding quizzes",
+      "Child-friendly dashboard",
+      "Progress tracking for parents and teachers",
+    ],
+    tech: [
+      "Angular 16",
+      "Firebase",
+      "TypeScript",
+      "HTML5",
+      "SCSS",
+      "Azure DevOps",
+      "Git",
+    ],
+  },
+  {
+    id: 2,
+    name: "Tartibat",
+    nameAr: "ترتيبات",
+    type: "Heavy",
+    category: "frontend",
+    description:
+      "A comprehensive company management system that handles projects, employees, HR processes such as payroll, leave requests, vacations, as well as reports and financial accounts.",
+    descriptionAr:
+      "نظام شامل لإدارة الشركات والمشاريع والموظفين والموارد البشرية مثل كشوف المرتبات وطلبات الإجازة والإجازات، بالإضافة إلى التقارير والحسابات المالية.",
+    tags: ["Angular", "PHP", "MySQL", "Bootstrap"],
+    image: "./assets/projects/poster_6.png",
+    features: [
+      "Company & Project Management",
+      "Employee & HR Management",
+      "Payroll & Leave Requests",
+      "Reports & Analytics",
+      "Financial Accounts Tracking",
+    ],
+    tech: [
+      "Angular 17",
+      "Firebase",
+      "TypeScript",
+      "HTML5",
+      "SCSS",
+      "Azure DevOps",
+      "Git",
+    ],
+  },
+  {
+    id: 3,
+    name: "Quraan.me",
+    nameAr: "مشروع قرآني",
+    type: "Heavy",
+    category: "fullstack",
+    description:
+      "An educational platform focused on teaching and memorizing the Holy Quran and Islamic studies, providing interactive sessions between students and teachers with integrated booking and payment features.",
+    descriptionAr:
+      "منصة تعليمية تهدف إلى تحفيظ القرآن الكريم والمواد التعليمية الدينية، مع إتاحة جلسات مباشرة بين الطالب والمعلم، بالإضافة إلى خاصية الحجز والدفع للمواعيد.",
+    tags: ["Angular", "TypeScript", "SCSS", "PWA", "Firebase", "Node.js"],
+    image: "./assets/projects/me_1.png",
+    features: [
+      "Quran Reading & Memorization",
+      "Audio Recitation",
+      "Live Student-Teacher Sessions",
+      "Class Booking & Scheduling",
+      "Online Payments",
+      "Progress Tracking",
+    ],
+    tech: ["Angular 16", "TypeScript", "SCSS", "HTML5", "Firebase", "Node.js"],
+  },
+
+  {
     id: 5,
     name: "SummaryCamp",
     nameAr: "مخيم الملخصات",
@@ -470,7 +504,7 @@ const projectsData = [
     descriptionAr:
       "نظام لإدارة مخيم صيفي تعليمي يتيح تسجيل الطلاب من مرحلة كيجي 1 حتى المرحلة الثانوية، مع إمكانية تحديد المواد الدراسية، واختيار الفترة (صباحية أو مسائية)، والدراسة أونلاين أو أوفلاين أو الاثنين معًا، بالإضافة إلى اختيار الفرع المناسب. كما يشمل النظام طرق الدفع المختلفة، ليجعل التعلم في الصيف ممتعًا وجذابًا للأطفال.",
     tags: ["Angular", "AI/ML", "Node.js", "NLP", "Firebase"],
-    icon: "fas fa-file-alt",
+    image: "./assets/projects/summary_2.png",
     features: [
       "Student Registration (KG1 to High School)",
       "Subject & Schedule Selection",
@@ -500,7 +534,7 @@ const projectsData = [
     descriptionAr:
       "نظام متكامل لإدارة العيادات الطبية (قيد العمل) مخصص للأطباء لإدارة سجلات المرضى، وحجز المواعيد، وإنشاء روشتات إلكترونية، وصفحة ملاحظات للطبيب، وإجراء عمليات الدفع، وعرض التاريخ المرضي للمريض مع تحديثات لحظية.",
     tags: ["Angular", "Node.js", "MongoDB", "Socket.io"],
-    icon: "fas fa-stethoscope",
+    image: "./assets/projects/youssef_1.png",
     features: [
       "Patient Records Management",
       "Appointment Scheduling",
@@ -523,7 +557,7 @@ const projectsData = [
     descriptionAr:
       "متجر إلكتروني لقصص الأطفال يتيح للمستخدم تخصيص القصة من خلال تغيير اسم البطل، شكله، سنه، ولونه، بما يناسب الطفل. كما يوفر النظام إمكانية حجز القصة بعد التخصيص، وإجراء عملية الدفع والتوصيل، مع دعم خيار الاسترجاع والتواصل مع خدمة العملاء أو صاحب المتجر.",
     tags: ["Angular", "TypeScript", "SCSS", "Animations"],
-    icon: "fas fa-book",
+    image: "./assets/projects/story.png",
     features: [
       "Personalized Children’s Stories",
       "Story Catalog & Search",
@@ -554,7 +588,7 @@ const projectsData = [
     descriptionAr:
       "نظام ERP متكامل يهدف إلى إدارة العمليات المحاسبية والمالية من توريدات ومشتريات ومبيعات، بالإضافة إلى إدارة الموظفين والمخازن، وإصدار تقارير يومية دقيقة، وإدارة المصروفات والتجار ومنافذ البيع.",
     tags: ["Angular", "Node.js", "PostgreSQL", "Docker", "Redis"],
-    icon: "fas fa-chart-pie",
+    image: "./assets/projects/d_4.png",
     features: [
       "Supply & Purchase Management",
       "Sales & POS Operations",
@@ -603,7 +637,9 @@ function initializeProjects() {
     projectElement.innerHTML = `
                     <div class="project-card">
                         <div class="project-image">
-                            <i class="${project.icon}"></i>
+                             <img src="${
+                               project.image
+                             }" alt="${projectName}" class="project-img" />
                         </div>
                         <div class="project-content">
                             <span class="project-type">${project.type}</span>
@@ -650,9 +686,9 @@ function showProjectDetails(projectId) {
                 <div class="row">
                     <div class="col-md-6 p-3">
                         <div class="project-image mb-3" style="height:auto; border-radius: 15px;">
-                            <i class="${
-                              project.icon
-                            }" style="font-size: 4rem;"></i>
+                             <img src="${
+                               project.image
+                             }" alt="${projectName}" class="project-img" />
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -872,18 +908,11 @@ function openEmailClient() {
       ? "مرحباً أسامة،\n\nأود مناقشة مشروع جديد معك. رأيت موقعك الإلكتروني وأعجبت بخبرتك ومهاراتك.\n\nتفاصيل المشروع:\n- نوع المشروع: \n- الميزانية المتوقعة: \n- الجدول الزمني: \n- متطلبات خاصة: \n\nأتطلع لسماع ردك.\n\nمع أطيب التحيات"
       : "Hello Osama,\n\nI would like to discuss a new project with you. I saw your website and I'm impressed with your expertise and skills.\n\nProject Details:\n- Project Type: \n- Expected Budget: \n- Timeline: \n- Special Requirements: \n\nLooking forward to hearing from you.\n\nBest regards";
 
-  window.open(
-    `mailto:osamaromih2020@gmail.com?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`,
-    "_blank",
-    "noopener,noreferrer"
-  );
+  const url = `https://mail.google.com/mail/?view=cm&fs=1&to=osamaromih2020@gmail.com&su=${encodeURIComponent(
+    subject
+  )}&body=${encodeURIComponent(body)}`;
 
-  // Close the modal
-  bootstrap.Modal.getInstance(
-    document.getElementById("contactOptionsModal")
-  ).hide();
+  window.open(url, "_blank", "noopener,noreferrer");
 }
 
 function openContactForm() {
