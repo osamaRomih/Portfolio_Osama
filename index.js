@@ -359,6 +359,7 @@ const projectsData = [
       "MongoDB",
       "Git",
     ],
+    link: "https://iqraainstitute.com",
   },
   {
     id: 4,
@@ -412,6 +413,7 @@ const projectsData = [
       "Professional Branding",
     ],
     tech: ["HTML5", "CSS3", "JavaScript ES6", "Bootstrap 5", "Tailwind CSS"],
+    link: "https://osamaromih.github.io/Portfolio_Osama/",
   },
   {
     id: 1,
@@ -491,6 +493,7 @@ const projectsData = [
       "Progress Tracking",
     ],
     tech: ["Angular 16", "TypeScript", "SCSS", "HTML5", "Firebase", "Node.js"],
+    link: "https://quraan.me/",
   },
 
   {
@@ -522,6 +525,7 @@ const projectsData = [
       "Azure DevOps",
       "Git",
     ],
+    link: "https://learn-camp.com/student-info",
   },
   {
     id: 9,
@@ -545,6 +549,7 @@ const projectsData = [
       "Real-time Updates",
     ],
     tech: ["Angular 17", "Node.js", "MongoDB", "Socket.io"],
+    link: "https://osamaromih.github.io/portfolio_Dr.youssef/",
   },
   {
     id: 8,
@@ -655,6 +660,21 @@ function initializeProjects() {
                                     : "View Details"
                                 }
                             </button>
+                            ${
+                              project.link
+                                ? `
+                                <a href="${
+                                  project.link
+                                }" target="_blank" class="btn btn-primary mt-3 ms-2">
+                                  ${
+                                    currentLang === "ar"
+                                      ? "عرض المشروع"
+                                      : "View Project"
+                                  }
+                                </a>
+                              `
+                                : ""
+                            }
                         </div>
                     </div>
                 `;
