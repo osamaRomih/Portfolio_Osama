@@ -311,7 +311,10 @@ function initializeSkills() {
       </div>
     `;
     // المهارات بعد 12 تكون مخفية مبدئياً
-    if (index >= visibleCount) skillElement.classList.add("hidden-skill");
+    if (index >= visibleCount) {
+      skillElement.classList.add("hidden-skill");
+      skillElement.style.display = "none"; // 👈 دي المفتاح
+    }
     skillsGrid.appendChild(skillElement);
   });
 
@@ -1116,28 +1119,34 @@ animate();
 function toggleSkills() {
   const hiddenSkills = document.querySelectorAll(".hidden-skill");
   const showMoreBtn = document.getElementById("showMoreBtn");
-  const isHidden = hiddenSkills[0].classList.contains("fade-out");
 
-  if (isHidden) {
-    // إعادة إظهارها
+  const isCurrentlyHidden = hiddenSkills[0].style.display === "none";
+
+  if (isCurrentlyHidden) {
+    // عرض المهارات
     hiddenSkills.forEach((el, i) => {
+      el.style.display = "block";
       el.classList.remove("fade-out");
       el.classList.add("fade-in");
-      el.style.display = "block";
       el.style.animationDelay = `${i * 0.05}s`;
     });
+
     showMoreBtn.innerHTML = currentLang === "ar" ? "عرض أقل ↑" : "Show Less ↑";
   } else {
-    // إخفاؤها مجدداً
+    // إخفاؤها
     hiddenSkills.forEach((el) => {
       el.classList.remove("fade-in");
       el.classList.add("fade-out");
-      setTimeout(() => (el.style.display = "none"), 400);
+      setTimeout(() => {
+        el.style.display = "none";
+      }, 400);
     });
+
     showMoreBtn.innerHTML =
       currentLang === "ar" ? "عرض المزيد ↓" : "Show More ↓";
   }
 }
+
 window.addEventListener("scroll", function () {
   const navbar = document.querySelector(".navbar");
   const isDarkMode = document.body.classList.contains("dark-mode"); // لو انت بتضيف كلاس للدرك مود
